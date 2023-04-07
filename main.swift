@@ -7,4 +7,4 @@
 
 import Foundation
 
-RecursionPermutations().generateAllPermutations("abc")
+print(RecursionPermutationsAnsInList().generateAllPermutations("abc"))
