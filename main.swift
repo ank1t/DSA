@@ -7,4 +7,4 @@
 
 import Foundation
 
-print(RecursionPermutationsAnsInList().generateAllPermutations("abc"))
+print(LetterCombinationsIterative().letterCombinations("2"))
