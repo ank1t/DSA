@@ -7,4 +7,4 @@
 
 import Foundation
 
-print(LetterCombinationsIterative().letterCombinations("2"))
+print(LetterCombinationsIterative().letterCombinations("23"))

@@ -49,19 +49,25 @@ struct LetterCombinationsIterative {
         "6" : "mno",
         "7" : "pqrs",
         "8" : "tuv",
-        "9" : "wxyz"
-    ]
+        "9" : "wxyz"]
+    
     func letterCombinations(_ digits: String) -> [String] {
         var ans: [String] = []
-        var digitsVar: String = digits
-        while !digitsVar.isEmpty {
-            let digitChars: String = map[digits.first!, default: ""]
+        var digitsIndex: Int = 0
+        while digitsIndex < digits.count {
+            let digitChars: String = map[digits[digitsIndex], default: ""]
+            var temp: [String] = []
             for char in digitChars {
-                for arr in ans {
-                    arr.append(String(char))
+                if ans.isEmpty {
+                    temp.append(String(char))
+                } else {
+                    for str in ans {
+                        temp.append(str + String(char))
+                    }
                 }
             }
-            digitsVar.dropFirst()
+            ans = temp
+            digitsIndex += 1
         }
         return ans
     }
